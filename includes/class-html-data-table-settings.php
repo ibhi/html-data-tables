@@ -67,7 +67,7 @@ class HTML_Data_Table_Settings {
 	 * @return void
 	 */
 	public function add_menu_item () {
-		$page = add_options_page( __( 'Plugin Settings', 'html-data-table' ) , __( 'Plugin Settings', 'html-data-table' ) , 'manage_options' , 'html_data_table_settings' ,  array( $this, 'settings_page' ) );
+		$page = add_options_page( __( 'HTML Data Table Plugin Settings', 'html-data-table' ) , __( 'HTML Data Table Plugin Settings', 'html-data-table' ) , 'manage_options' , 'html_data_table_settings' ,  array( $this, 'settings_page' ) );
 		add_action( 'admin_print_styles-' . $page, array( $this, 'settings_assets' ) );
 	}
 
@@ -112,108 +112,108 @@ class HTML_Data_Table_Settings {
 			'description'			=> __( 'These are fairly standard form input fields.', 'html-data-table' ),
 			'fields'				=> array(
 				array(
-					'id' 			=> 'text_field',
+					'id' 			=> 'table_id_text_field',
 					'label'			=> __( 'Some Text' , 'html-data-table' ),
 					'description'	=> __( 'This is a standard text field.', 'html-data-table' ),
 					'type'			=> 'text',
 					'default'		=> '',
 					'placeholder'	=> __( 'Placeholder text', 'html-data-table' )
 				),
-				array(
-					'id' 			=> 'password_field',
-					'label'			=> __( 'A Password' , 'html-data-table' ),
-					'description'	=> __( 'This is a standard password field.', 'html-data-table' ),
-					'type'			=> 'password',
-					'default'		=> '',
-					'placeholder'	=> __( 'Placeholder text', 'html-data-table' )
-				),
-				array(
-					'id' 			=> 'secret_text_field',
-					'label'			=> __( 'Some Secret Text' , 'html-data-table' ),
-					'description'	=> __( 'This is a secret text field - any data saved here will not be displayed after the page has reloaded, but it will be saved.', 'html-data-table' ),
-					'type'			=> 'text_secret',
-					'default'		=> '',
-					'placeholder'	=> __( 'Placeholder text', 'html-data-table' )
-				),
-				array(
-					'id' 			=> 'text_block',
-					'label'			=> __( 'A Text Block' , 'html-data-table' ),
-					'description'	=> __( 'This is a standard text area.', 'html-data-table' ),
-					'type'			=> 'textarea',
-					'default'		=> '',
-					'placeholder'	=> __( 'Placeholder text for this textarea', 'html-data-table' )
-				),
-				array(
-					'id' 			=> 'single_checkbox',
-					'label'			=> __( 'An Option', 'html-data-table' ),
-					'description'	=> __( 'A standard checkbox - if you save this option as checked then it will store the option as \'on\', otherwise it will be an empty string.', 'html-data-table' ),
-					'type'			=> 'checkbox',
-					'default'		=> ''
-				),
-				array(
-					'id' 			=> 'select_box',
-					'label'			=> __( 'A Select Box', 'html-data-table' ),
-					'description'	=> __( 'A standard select box.', 'html-data-table' ),
-					'type'			=> 'select',
-					'options'		=> array( 'drupal' => 'Drupal', 'joomla' => 'Joomla', 'wordpress' => 'WordPress' ),
-					'default'		=> 'wordpress'
-				),
-				array(
-					'id' 			=> 'radio_buttons',
-					'label'			=> __( 'Some Options', 'html-data-table' ),
-					'description'	=> __( 'A standard set of radio buttons.', 'html-data-table' ),
-					'type'			=> 'radio',
-					'options'		=> array( 'superman' => 'Superman', 'batman' => 'Batman', 'ironman' => 'Iron Man' ),
-					'default'		=> 'batman'
-				),
-				array(
-					'id' 			=> 'multiple_checkboxes',
-					'label'			=> __( 'Some Items', 'html-data-table' ),
-					'description'	=> __( 'You can select multiple items and they will be stored as an array.', 'html-data-table' ),
-					'type'			=> 'checkbox_multi',
-					'options'		=> array( 'square' => 'Square', 'circle' => 'Circle', 'rectangle' => 'Rectangle', 'triangle' => 'Triangle' ),
-					'default'		=> array( 'circle', 'triangle' )
-				)
+				// array(
+				// 	'id' 			=> 'password_field',
+				// 	'label'			=> __( 'A Password' , 'html-data-table' ),
+				// 	'description'	=> __( 'This is a standard password field.', 'html-data-table' ),
+				// 	'type'			=> 'password',
+				// 	'default'		=> '',
+				// 	'placeholder'	=> __( 'Placeholder text', 'html-data-table' )
+				// ),
+				// array(
+				// 	'id' 			=> 'secret_text_field',
+				// 	'label'			=> __( 'Some Secret Text' , 'html-data-table' ),
+				// 	'description'	=> __( 'This is a secret text field - any data saved here will not be displayed after the page has reloaded, but it will be saved.', 'html-data-table' ),
+				// 	'type'			=> 'text_secret',
+				// 	'default'		=> '',
+				// 	'placeholder'	=> __( 'Placeholder text', 'html-data-table' )
+				// ),
+				// array(
+				// 	'id' 			=> 'text_block',
+				// 	'label'			=> __( 'A Text Block' , 'html-data-table' ),
+				// 	'description'	=> __( 'This is a standard text area.', 'html-data-table' ),
+				// 	'type'			=> 'textarea',
+				// 	'default'		=> '',
+				// 	'placeholder'	=> __( 'Placeholder text for this textarea', 'html-data-table' )
+				// ),
+				// array(
+				// 	'id' 			=> 'single_checkbox',
+				// 	'label'			=> __( 'An Option', 'html-data-table' ),
+				// 	'description'	=> __( 'A standard checkbox - if you save this option as checked then it will store the option as \'on\', otherwise it will be an empty string.', 'html-data-table' ),
+				// 	'type'			=> 'checkbox',
+				// 	'default'		=> ''
+				// ),
+				// array(
+				// 	'id' 			=> 'select_box',
+				// 	'label'			=> __( 'A Select Box', 'html-data-table' ),
+				// 	'description'	=> __( 'A standard select box.', 'html-data-table' ),
+				// 	'type'			=> 'select',
+				// 	'options'		=> array( 'drupal' => 'Drupal', 'joomla' => 'Joomla', 'wordpress' => 'WordPress' ),
+				// 	'default'		=> 'wordpress'
+				// ),
+				// array(
+				// 	'id' 			=> 'radio_buttons',
+				// 	'label'			=> __( 'Some Options', 'html-data-table' ),
+				// 	'description'	=> __( 'A standard set of radio buttons.', 'html-data-table' ),
+				// 	'type'			=> 'radio',
+				// 	'options'		=> array( 'superman' => 'Superman', 'batman' => 'Batman', 'ironman' => 'Iron Man' ),
+				// 	'default'		=> 'batman'
+				// ),
+				// array(
+				// 	'id' 			=> 'multiple_checkboxes',
+				// 	'label'			=> __( 'Some Items', 'html-data-table' ),
+				// 	'description'	=> __( 'You can select multiple items and they will be stored as an array.', 'html-data-table' ),
+				// 	'type'			=> 'checkbox_multi',
+				// 	'options'		=> array( 'square' => 'Square', 'circle' => 'Circle', 'rectangle' => 'Rectangle', 'triangle' => 'Triangle' ),
+				// 	'default'		=> array( 'circle', 'triangle' )
+				// )
 			)
 		);
 
-		$settings['extra'] = array(
-			'title'					=> __( 'Extra', 'html-data-table' ),
-			'description'			=> __( 'These are some extra input fields that maybe aren\'t as common as the others.', 'html-data-table' ),
-			'fields'				=> array(
-				array(
-					'id' 			=> 'number_field',
-					'label'			=> __( 'A Number' , 'html-data-table' ),
-					'description'	=> __( 'This is a standard number field - if this field contains anything other than numbers then the form will not be submitted.', 'html-data-table' ),
-					'type'			=> 'number',
-					'default'		=> '',
-					'placeholder'	=> __( '42', 'html-data-table' )
-				),
-				array(
-					'id' 			=> 'colour_picker',
-					'label'			=> __( 'Pick a colour', 'html-data-table' ),
-					'description'	=> __( 'This uses WordPress\' built-in colour picker - the option is stored as the colour\'s hex code.', 'html-data-table' ),
-					'type'			=> 'color',
-					'default'		=> '#21759B'
-				),
-				array(
-					'id' 			=> 'an_image',
-					'label'			=> __( 'An Image' , 'html-data-table' ),
-					'description'	=> __( 'This will upload an image to your media library and store the attachment ID in the option field. Once you have uploaded an imge the thumbnail will display above these buttons.', 'html-data-table' ),
-					'type'			=> 'image',
-					'default'		=> '',
-					'placeholder'	=> ''
-				),
-				array(
-					'id' 			=> 'multi_select_box',
-					'label'			=> __( 'A Multi-Select Box', 'html-data-table' ),
-					'description'	=> __( 'A standard multi-select box - the saved data is stored as an array.', 'html-data-table' ),
-					'type'			=> 'select_multi',
-					'options'		=> array( 'linux' => 'Linux', 'mac' => 'Mac', 'windows' => 'Windows' ),
-					'default'		=> array( 'linux' )
-				)
-			)
-		);
+		// $settings['extra'] = array(
+		// 	'title'					=> __( 'Extra', 'html-data-table' ),
+		// 	'description'			=> __( 'These are some extra input fields that maybe aren\'t as common as the others.', 'html-data-table' ),
+		// 	'fields'				=> array(
+		// 		array(
+		// 			'id' 			=> 'number_field',
+		// 			'label'			=> __( 'A Number' , 'html-data-table' ),
+		// 			'description'	=> __( 'This is a standard number field - if this field contains anything other than numbers then the form will not be submitted.', 'html-data-table' ),
+		// 			'type'			=> 'number',
+		// 			'default'		=> '',
+		// 			'placeholder'	=> __( '42', 'html-data-table' )
+		// 		),
+		// 		array(
+		// 			'id' 			=> 'colour_picker',
+		// 			'label'			=> __( 'Pick a colour', 'html-data-table' ),
+		// 			'description'	=> __( 'This uses WordPress\' built-in colour picker - the option is stored as the colour\'s hex code.', 'html-data-table' ),
+		// 			'type'			=> 'color',
+		// 			'default'		=> '#21759B'
+		// 		),
+		// 		array(
+		// 			'id' 			=> 'an_image',
+		// 			'label'			=> __( 'An Image' , 'html-data-table' ),
+		// 			'description'	=> __( 'This will upload an image to your media library and store the attachment ID in the option field. Once you have uploaded an imge the thumbnail will display above these buttons.', 'html-data-table' ),
+		// 			'type'			=> 'image',
+		// 			'default'		=> '',
+		// 			'placeholder'	=> ''
+		// 		),
+		// 		array(
+		// 			'id' 			=> 'multi_select_box',
+		// 			'label'			=> __( 'A Multi-Select Box', 'html-data-table' ),
+		// 			'description'	=> __( 'A standard multi-select box - the saved data is stored as an array.', 'html-data-table' ),
+		// 			'type'			=> 'select_multi',
+		// 			'options'		=> array( 'linux' => 'Linux', 'mac' => 'Mac', 'windows' => 'Windows' ),
+		// 			'default'		=> array( 'linux' )
+		// 		)
+		// 	)
+		// );
 
 		$settings = apply_filters( 'html_data_table_settings_fields', $settings );
 

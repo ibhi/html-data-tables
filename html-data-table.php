@@ -2,15 +2,15 @@
 /*
  * Plugin Name: HTML Data Table
  * Version: 1.0
- * Plugin URI: http://www.hughlashbrooke.com/
- * Description: 
- * Author: Hugh Lashbrooke
- * Author URI: http://www.hughlashbrooke.com/
+ * Plugin URI: http://www.noobish.in/
+ * Description: This is a wordpress plugin which can be used to apply jquery datatables to any HTML table you are already having on your theme, posts, custom post types or pages
+ * Author: ibhi
+ * Author URI: http://www.noobish.in/
  * Requires at least: 3.8
  * Tested up to: 3.8.1
  *
  * @package WordPress
- * @author Hugh Lashbrooke
+ * @author ibhi
  * @since 1.0.0
  */
 
